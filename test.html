@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marvel | Spider-Man 2</title>
+  <link rel="shortcut icon" href="img/spiderman2-logo.jpg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/test.css" />
+</head>
+<body>
+  <!-- Left vertical social bar -->
+  <aside class="social" aria-hidden="false" aria-label="Social links">
+    <img src="img/ps.png" width="150px" alt="Playstation Logo">
+    <br>
+    <br>
+    <img src="img/Spider-Man-2-Logo-PNG.png" width="150px" alt="Spider-Man 2 Logo">
+    <br>
+    <br>
+    <br>
+    <a aria-label="YouTube" href="#"><span>▶</span></a>
+    <a aria-label="Instagram" href="#"><span>⌾</span></a>
+    <a aria-label="Facebook" href="#"><span>f</span></a>
+    <a aria-label="X / Twitter" href="#"><span>𝕏</span></a>
+  </aside>
+
+  <!-- Top navigation -->
+  <header class="site-header">
+    <nav class="nav">
+      <div class="brand">
+        <img src="img/Marvels-Spider-Man-2-Logo-PNG.png" alt="" width="150px">
+      </div>
+      <ul class="menu">
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#wallpapers">Wallpapers</a></li>
+        <li><a href="#hashtag">#SPIDERMAN2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main class="hero" id="home">
+    <!-- angled red panel -->
+    <div class="red-panel" aria-hidden="true"></div>
+
+    <!-- characters (two stacked renders) -->
+    <div class="characters" id="tilt">
+      <img class="spidey spidey-1" src="img/Marvels-Spider-Man-2-Logo-PNG.png" alt="Peter Parker Spider-Man">
+      <img class="spidey spidey-2" src="img/spiderman2.png" alt="Miles Morales Spider-Man">
+      <div class="venom-spark" aria-hidden="true"></div>
+    </div>
+
+    <!-- right content -->
+    <section class="pitch">
+      <h1><span class="brand-mini">MARVEL</span><br>SPIDER-MAN 2</h1>
+      <p>
+        Spider-Men, Peter Parker and Miles Morales, return for an all-new adventure on PS5.
+        Swing, jump, and use the new Web Wings to cross Marvel’s New York—swap between heroes,
+        experience unique stories and powers, and face a city-shaking threat.
+      </p>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="#preorder">
+          <span>Pre-Order Now</span>
+          <i class="btn-shadow" aria-hidden="true"></i>
+        </a>
+        <a class="btn btn-ghost" href="#trailer">Watch Trailer</a>
+      </div>
+
+      <!-- dots (decorative) -->
+      <div class="dots" role="presentation">
+        <button class="dot active" aria-label="slide 1"></button>
+        <button class="dot" aria-label="slide 2"></button>
+        <button class="dot" aria-label="slide 3"></button>
+      </div>
+    </section>
+  </main>
+
+  <!-- filler sections to demonstrate nav anchors -->
+  <section id="story" class="section dark">
+    <h2>Story</h2>
+    <p>Two heroes, one city. New threats demand new teamwork.</p>
+  </section>
+
+  <section id="wallpapers" class="section">
+    <h2>Wallpapers</h2>
+    <p>Coming soon: cinematic 4K shots and mobile crops.</p>
+  </section>
+
+  <section id="hashtag" class="section dark">
+    <h2>#SPIDERMAN2</h2>
+    <p>Share your best swings and photo-mode shots.</p>
+  </section>
+
+  <script>
+    // Simple entrance animation
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.pitch, .characters, .site-header, .social')
+    .forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(12px)';
+      requestAnimationFrame(() => {
+        el.style.transition = 'opacity .6s ease, transform .6s ease';
+        el.style.opacity = 1;
+        el.style.transform = 'translateY(0)';
+      });
+    });
+});
+
+// Lightweight tilt/parallax on the characters block
+(() => {
+  const el = document.getElementById('tilt');
+  if (!el) return;
+
+  const maxTilt = 6; // degrees
+  const reset = () => { el.style.transform = 'perspective(800px) rotateX(0) rotateY(0)'; };
+
+  el.addEventListener('mousemove', (e) => {
+    const rect = el.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;   // 0..1
+    const y = (e.clientY - rect.top) / rect.height;   // 0..1
+    const rx = (0.5 - y) * maxTilt;
+    const ry = (x - 0.5) * maxTilt;
+    el.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+  });
+
+  el.addEventListener('mouseleave', reset);
+  reset();
+})();
+
+  </script>
+</body>
+</html>

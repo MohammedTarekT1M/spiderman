@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marvel Spider-Man 2</title>
+    <link rel="shortcut icon" href="img/spiderman2-logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="css/spiderman2.css">
+</head>
+<body class="page-2">
+  <header class="site-header">
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#wallpapers">Wallpapers</a></li>
+        <li><a href="#spiderman2">#SpiderMan2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="spidey2-hero" id="home">
+    <aside class="side-rail">
+      <img class="ps" src="img/ps.png" alt="PlayStation" />
+      <div class="emblem" aria-hidden="true"></div>
+      <nav class="social" aria-label="Social links">
+        <a href="#" aria-label="YouTube" class="ico yt">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a4.1 4.1 0 0 0-2.8-2.9C18.8 2.7 12 2.7 12 2.7s-6.8 0-8.7.6A4.1 4.1 0 0 0 .5 6.2 42 42 0 0 0 0 12a42 42 0 0 0 .5 5.8 4.1 4.1 0 0 0 2.8 2.9c1.9.6 8.7.6 8.7.6s6.8 0 8.7-.6a4.1 4.1 0 0 0 2.8-2.9A42 42 0 0 0 24 12a42 42 0 0 0-.5-5.8ZM9.8 15.5V8.5L16 12l-6.2 3.5Z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" class="ico ig">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5Zm6.25-2.75a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" class="ico fb">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8h2.6l.4-3H13.5V9.4c0-.9.3-1.5 1.6-1.5H17V5.2c-.8-.1-1.7-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3V11H8v3h2.3v8h3.2Z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter" class="ico tw">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M22 5.9c-.7.3-1.4.5-2.2.6a3.7 3.7 0 0 0 1.6-2 7.3 7.3 0 0 1-2.3.9 3.6 3.6 0 0 0-6.2 3.2A10.3 10.3 0 0 1 3.2 4.8a3.6 3.6 0 0 0 1.1 4.8c-.6 0-1.1-.2-1.6-.4a3.6 3.6 0 0 0 2.9 3.6c-.5.1-1 .1-1.5 0a3.6 3.6 0 0 0 3.4 2.5A7.2 7.2 0 0 1 2 18.6a10.2 10.2 0 0 0 5.6 1.6c6.7 0 10.4-5.6 10.4-10.4v-.5c.7-.5 1.3-1.1 2-1.8Z"/></svg>
+        </a>
+      </nav>
+    </aside>
+
+    <div class="spidey2-stage">
+      <div class="duo">
+        <img class="duo-img" src="img/spiderman2.png" alt="Peter Parker and Miles Morales">
+      </div>
+    </div>
+
+    <section class="spidey2-copy">
+      <img class="title-img" src="img/Marvels-Spider-Man-2-Logo-PNG.png" alt="Marvel Spider-Man 2" />
+      <p class="lead">
+        Spider‑Men, Peter Parker and Miles Morales, return for an exciting new adventure
+        in Marvel's Spider‑Man franchise for PS5. Swing, jump and utilize new Web Wings
+        to travel across Marvel’s New York, switching between Peter and Miles to
+        experience different stories and epic new powers while a sinister threat looms.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary btn-chunky" href="test.html">New One</a>
+        <button class="btn btn-ghost btn-outline" id="trailer2">Watch Trailer</button>
+      </div>
+    </section>
+
+    <div class="dots" aria-label="slides navigation">
+      <button aria-label="Slide 1" class="active"></button>
+      <button aria-label="Slide 2"></button>
+      <button aria-label="Slide 3"></button>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Simple modal for trailer on this page
+    (function(){
+      const teaserBtn = document.getElementById('trailer2');
+      if (!teaserBtn) return;
+      function ensureModal(){
+        let modal = document.querySelector('.modal');
+        if (modal) return modal;
+        modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `
+          <div class="modal__dialog" role="dialog" aria-modal="true" aria-label="Watch trailer">
+            <div class="modal__header">
+              <strong>Watch Trailer</strong>
+              <button class="modal__close" aria-label="Close">×</button>
+            </div>
+            <div class="modal__body">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/nq1M_Wc4FIc?si=Bo_MVtMCXGKFZr47" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>`;
+        document.body.appendChild(modal);
+        const close = () => modal.classList.remove('open');
+        modal.addEventListener('click', (ev)=>{ if (ev.target===modal) close(); });
+        modal.querySelector('.modal__close').addEventListener('click', close);
+        window.addEventListener('keydown', (ev) => { if (ev.key === 'Escape') close(); });
+        return modal;
+      }
+      teaserBtn.addEventListener('click', () => {
+        const modal = ensureModal();
+        modal.classList.add('open');
+      });
+    })();
+  </script>
+</body>
+</html>
