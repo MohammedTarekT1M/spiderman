@@ -190,7 +190,7 @@ const DATA = [
         year:2020, 
         name:"Marvel's Spider-Man: Miles Morales", 
         era:"Insomniac Era (2018–Present)",
-        img:"../img/miles-cover.jpg",
+        img:"https://www.sluijters.shop//Files/10/338000/338370/ProductPhotos/1920x1080/1992832062.jpg",
         trailer:"https://youtu.be/hY3qiRq0yEM",
         platforms:["PS4","PS5","PC"], 
         engine:"Insomniac Proprietary", 
