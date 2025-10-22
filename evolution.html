@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiderman Evolution</title>
+    <link rel="shortcut icon" href="https://cdn2.steamgriddb.com/icon/706e0c87b8e70fe2c230eda28381f30a.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/evolution.css">
+</head>
+<body>
+  <div id="splash">
+    <span>
+      <img src="https://cdn2.steamgriddb.com/icon/706e0c87b8e70fe2c230eda28381f30a.ico" width="350px">
+    </span>
+  </div>
+    <header>
+    <div class="wrap" style="display:flex; align-items:center; gap:14px; justify-content:space-between">
+      <div style="display:flex; align-items:center; gap:12px">
+        <img src="https://logos-world.net/wp-content/uploads/2020/11/Spider-Man-Logo.png" width="150px" alt="Spiderman Logo">
+      </div>
+      <div style="display:flex; gap:8px; align-items:center; color:var(--muted); font-size:12px">
+        <img src="img/ps.png" width="120px" alt="Playstation Logo">
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="title">Spiderman Evolution (1982 - 2023)</div>
+    <div class="subtitle">Search, filter by era, and click into cards to explore signature features, engines, and platform.</div>
+  </section>
+
+  <section class="controls">
+    <input id="q" type="search" placeholder="Search by title, year, platform, or feature…" autocomplete="off" />
+    <select id="era">
+      <option value="">All eras</option>
+      <option>Golden Age (1980–1989)</option>
+      <option>Silver Age (1990–1999)</option>
+      <option>Modern Age (2000–2017)</option>
+      <option> Insomniac Era (2018–Present)</option>
+    </select>
+    <select id="sort">
+      <option value="year-asc">Sort: Old → New</option>
+      <option value="year-desc">Sort: New → Old</option>
+      <option value="name-asc">Sort: A → Z</option>
+      <option value="name-desc">Sort: Z → A</option>
+    </select>
+    <button class="primary" id="reset">Reset filters</button>
+  </section>
+
+  <section class="grid" id="grid" aria-live="polite"></section>
+
+  <div class="footer">
+    <div class="floating">Tip: Press <span class="kbd">/</span> to focus search. Use <span class="kbd">↑</span>/<span class="kbd">↓</span> in the sort menu for quick ordering.</div>
+  </div>
+
+  <dialog id="modal" style="max-width:1100px; width:clamp(320px,92vw,1100px); border:none; border-radius:16px; background:#0e1420; color:var(--text); box-shadow:0 30px 100px rgba(0,0,0,.45);">
+    <div style="padding:18px 18px 6px; border-bottom:1px solid #1b2333; display:flex; align-items:center; justify-content:space-between; gap:12px">
+      <div style="font-weight:800"></div>
+      <button id="closeModal" style="background:#003791; color:var(--text); border:1px solid #263049; border-radius:10px; padding:8px 10px; cursor:pointer;">Close</button>
+    </div>
+    <div id="modalBody"></div>
+  </dialog>
+
+  <script src="js/evolution.js"></script>
+    
+</body>
+</html>

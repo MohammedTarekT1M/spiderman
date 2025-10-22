@@ -79,6 +79,7 @@ body {
 
 .btn { border: 0; cursor: pointer; padding: 14px 24px; font-weight: 700; letter-spacing: .04em; border-radius: 12px; transition: transform .15s ease, box-shadow .2s ease, background .2s ease; }
 .btn-primary { background: var(--red); color: white; box-shadow: 0 10px 25px rgba(255,43,43,.35), inset 0 -2px 0 rgba(0,0,0,.25); }
+a{ text-decoration: none; color: white; text-align: center;}
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 35px rgba(255,43,43,.5), inset 0 -2px 0 rgba(0,0,0,.25); }
 .btn-ghost { background: transparent; color: #ffd4d4; border: 2px solid var(--red); }
 .btn-ghost:hover { background: rgba(255,43,43,.12); transform: translateY(-2px); }
